@@ -151,12 +151,6 @@ export default class BooksList extends Component {
                 </label>{" "}
                 {currentBook.author}
               </div>
-              <div>
-                <label>
-                  <strong>Status:</strong>
-                </label>{" "}
-                {currentBook.published ? "Published" : "Pending"}
-              </div>
 
               <Link
                 to={"/books/" + currentBook.id}

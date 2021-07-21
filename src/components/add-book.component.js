@@ -13,7 +13,6 @@ export default class AddBook extends Component {
       id: null,
       title: "",
       author: "", 
-      published: false,
 
       submitted: false
     };
@@ -43,7 +42,6 @@ export default class AddBook extends Component {
           id: response.data.id,
           title: response.data.title,
           author: response.data.author,
-          published: response.data.published,
 
           submitted: true
         });
@@ -59,7 +57,6 @@ export default class AddBook extends Component {
       id: null,
       title: "",
       author: "",
-      published: false,
 
       submitted: false
     });

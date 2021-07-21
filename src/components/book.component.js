@@ -7,7 +7,6 @@ export default class Book extends Component {
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeAuthor = this.onChangeAuthor.bind(this);
     this.getBook = this.getBook.bind(this);
-    this.updatePublished = this.updatePublished.bind(this);
     this.updateBook = this.updateBook.bind(this);
     this.deleteBook = this.deleteBook.bind(this);
 
@@ -16,7 +15,6 @@ export default class Book extends Component {
         id: null,
         title: "",
         author: "",
-        published: false
       },
       message: ""
     };
@@ -56,29 +54,6 @@ export default class Book extends Component {
         this.setState({
           currentBook: response.data
         });
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  }
-
-  updatePublished(status) {
-    var data = {
-      id: this.state.currentBook.id,
-      title: this.state.currentBook.title,
-      author: this.state.currentBook.author,
-      published: status
-    };
-
-    BookDataService.update(this.state.currentBook.id, data)
-      .then(response => {
-        this.setState(prevState => ({
-          currentBook: {
-            ...prevState.currentBook,
-            published: status
-          }
-        }));
         console.log(response.data);
       })
       .catch(e => {
@@ -143,29 +118,10 @@ export default class Book extends Component {
                 />
               </div>
 
-              <div className="form-group">
-                <label>
-                  <strong>Status:</strong>
-                </label>
-                {currentBook.published ? "Published" : "Pending"}
-              </div>
+              {}
             </form>
 
-            {currentBook.published ? (
-              <button
-                className="btn btn-warning"
-                onClick={() => this.updatePublished(false)}
-              >
-                UnPublish
-              </button>
-            ) : (
-              <button
-                className="btn btn-warning"
-                onClick={() => this.updatePublished(true)}
-              >
-                Publish
-              </button>
-            )}
+            {}
 
             <button
               className="btn btn-danger"
