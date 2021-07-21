@@ -1,0 +1,17 @@
+Application Instructions
+==================
+In order to run the server:
+1. Download server side folder from booksCrud to a local folder in your computer and add a node_modules folder (not include due to space).
+2. Run the following terminal command: node server.js
+! Note - Because I used axios, I had a problem with CROSS ORIGIN so I used a Chrome plugin (Moesif Origin & CORS Changer) to overcome the problem !
+
+In order to run the client:
+1. Download all files in booksCrud folder to a local folder in your computer and add a node_modules folder (not include due to space).
+2. Run the following terminal command: npm start
+
+! Note !
+1. The projects do not include the node modules folder.
+2. A BOOTSTRAP installation is required if it does not exist (terminal command: npm install bootstrap).
+
+Thank you,
+Kobi.
