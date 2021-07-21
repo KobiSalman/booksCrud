@@ -100,7 +100,7 @@ export default class BooksList extends Component {
             />
             <div className="input-group-append">
               <button
-                className="btn btn-outline-secondary"
+                className="btn btn-outline-warning"
                 type="button"
                 onClick={this.searchTitle}
               >
@@ -135,7 +135,7 @@ export default class BooksList extends Component {
             Remove All
           </button>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-3">
           {currentBook ? (
             <div>
               <h4>Book</h4>

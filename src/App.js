@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-primary">
           <a href="/books" className="navbar-brand">
-            Books List App
+            Books List
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
