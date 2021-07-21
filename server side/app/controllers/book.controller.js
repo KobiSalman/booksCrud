@@ -13,7 +13,7 @@ exports.create = (req, res) => {
     const book = new Book({
       title: req.body.title,
       author: req.body.author,
-      published: req.body.published ? req.body.published : false
+      //published: req.body.published ? req.body.published : false
     });
   
     // Save Book in the database
@@ -124,20 +124,6 @@ exports.deleteAll = (req, res) => {
         res.status(500).send({
           message:
             err.message || "Some error occurred while removing all books."
-        });
-      });
-  };
-
-// Find all published Books
-exports.findAllPublished = (req, res) => {
-    Book.find({ published: true })
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving books."
         });
       });
   };
